@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloning CNN with Bootstrap</title>
+    <style>
+        .mainMenu {
+            list-style-type: none; 
+            padding: 0; 
+            display: flex; 
+            background-color: black; 
+            height: 50px; 
+            align-items: center;
+        }
+
+        .mainMenu li {
+            margin-right: 25px; 
+        }
+
+        .mainMenu a {
+            color: white; 
+            text-decoration: none; 
+            display: flex; 
+            align-items: center; 
+        }
+
+        .mainMenu img {
+            margin-right: 25px; 
+            height: 50px; 
+        }
+
+        .searchButton {
+            margin-left: auto; 
+        }
+
+        .menuIcon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .secondMenu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: none; 
+        }
+
+        .secondMenu li {
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .secondMenu {
+                display: block; 
+            }
+
+            .mainMenu li:not(.searchButton) {
+                display: none; 
+            }
+
+            .menuIcon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul class="mainMenu">
+        <li><a class="" href="#"><img src="CNN.png" alt="US Icon"> US</a></li>
+        <li><a class="" href="#">International</a></li>
+        <li><a class="" href="#">Arabic</a></li>
+        <li><a class="" href="#">Espanol</a></li>
+        <li class="searchButton"><a class="" href="#">Search</a></li>
+    </ul>
+
+    <div class="menuIcon" onclick="toggleMenu()">☰</div>
+
+    <ul class="secondMenu">
+        <li class=""><a class="" href="#"><span class="">COVID-19</span>: Vaccination tracker</a></li>
+        <li class=""><a class="" href="#"><span class="">TRENDING</span>: Most luxurious airport</a></li>
+        <li class=""><a class="" href="#">Mysterious Chinese app </a></li>
+        <li class=""><a class="" href="#">Gerd Müller</a></li>
+        <li class=""><a class="" href="#">Melania Trump's White House Rose Garden</a></li>
+    </ul>
+
+    <script>
+        function toggleMenu() {
+            var secondMenu = document.querySelector('.secondMenu');
+            secondMenu.style.display = secondMenu.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
